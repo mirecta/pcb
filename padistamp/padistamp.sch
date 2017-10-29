@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:padi_stamp
+LIBS:padistamp-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -139,7 +140,7 @@ Wire Wire Line
 Wire Wire Line
 	4850 3050 5950 3050
 Wire Wire Line
-	5750 3050 5750 3150
+	5750 3050 5750 3950
 Wire Wire Line
 	5750 3150 5950 3150
 Connection ~ 5750 3050
@@ -158,7 +159,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 3850 5700 3850
 Wire Wire Line
-	5700 3850 5700 3250
+	5700 3250 5700 4050
 Wire Wire Line
 	5700 3250 5950 3250
 Connection ~ 3300 3050
@@ -225,4 +226,98 @@ Wire Wire Line
 	3800 4150 3800 3650
 Connection ~ 3800 3650
 Connection ~ 3900 3450
+$Comp
+L CONN_02X02 P4
+U 1 1 59F61FAF
+P 5800 4500
+F 0 "P4" H 5800 4650 50  0000 C CNN
+F 1 "SWD" H 5800 4350 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x02" H 5800 3300 50  0001 C CNN
+F 3 "" H 5800 3300 50  0000 C CNN
+	1    5800 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4450 6050 4050
+Wire Wire Line
+	6050 4050 5700 4050
+Connection ~ 5700 3850
+Wire Wire Line
+	6050 4550 6150 4550
+Wire Wire Line
+	6150 4550 6150 3950
+Wire Wire Line
+	6150 3950 5750 3950
+Connection ~ 5750 3150
+Wire Wire Line
+	3200 4450 5550 4450
+Wire Wire Line
+	3200 4450 3200 2850
+Connection ~ 3200 2850
+Wire Wire Line
+	5550 4550 3100 4550
+Wire Wire Line
+	3100 4550 3100 2650
+Connection ~ 3100 2650
+$Comp
+L TLV1117 U3
+U 1 1 59F62343
+P 2400 1900
+F 0 "U3" H 2400 1900 60  0000 C CNN
+F 1 "TLV1117" H 2400 2500 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 2400 1900 60  0001 C CNN
+F 3 "" H 2400 1900 60  0001 C CNN
+	1    2400 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P3
+U 1 1 59F623E0
+P 1350 1550
+F 0 "P3" H 1350 1700 50  0000 C CNN
+F 1 "5V" V 1450 1550 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 1350 1550 50  0001 C CNN
+F 3 "" H 1350 1550 50  0000 C CNN
+	1    1350 1550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 1500 2000 1500
+Wire Wire Line
+	1550 1600 2000 1600
+Wire Wire Line
+	2000 1600 2000 1700
+Wire Wire Line
+	2800 1700 2900 1700
+Wire Wire Line
+	2900 1500 2900 3050
+Connection ~ 2900 3050
+Wire Wire Line
+	1800 1600 1800 4200
+Wire Wire Line
+	1800 4200 6150 4200
+Connection ~ 6150 4200
+Connection ~ 1800 1600
+Wire Wire Line
+	2800 1500 2900 1500
+Connection ~ 2900 1700
+$Comp
+L CP_Small C1
+U 1 1 59F62755
+P 2100 1950
+F 0 "C1" H 2110 2020 50  0000 L CNN
+F 1 "0.1u" H 2110 1870 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2100 1950 50  0001 C CNN
+F 3 "" H 2100 1950 50  0000 C CNN
+	1    2100 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2200 1950 2900 1950
+Connection ~ 2900 1950
+Wire Wire Line
+	2000 1950 1900 1950
+Wire Wire Line
+	1900 1950 1900 1600
+Connection ~ 1900 1600
 $EndSCHEMATC
