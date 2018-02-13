@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:padistamp-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,10 +46,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L padi_stamp U1
+L padi_stamp padi_stamp1
 U 1 1 5978ECE2
 P 4150 2700
-F 0 "U1" H 4150 3050 60  0000 C CNN
+F 0 "padi_stamp1" H 4150 3050 60  0000 C CNN
 F 1 "padi_stamp" H 4150 2500 60  0000 C CNN
 F 2 "padistamp:padi_stamp" H 4150 2700 60  0001 C CNN
 F 3 "" H 4150 2700 60  0001 C CNN
@@ -67,25 +68,25 @@ F 3 "" H 4450 5200 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CONN_01X14 P2
+L Conn_01x14 P2
 U 1 1 5978EE10
-P 6150 3000
-F 0 "P2" H 6150 3750 50  0000 C CNN
-F 1 "CONN_01X14" V 6250 3000 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x14" H 6150 3000 50  0001 C CNN
-F 3 "" H 6150 3000 50  0000 C CNN
-	1    6150 3000
+P 6150 2950
+F 0 "P2" H 6150 3700 50  0000 C CNN
+F 1 "CONN_01X14" V 6250 2950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x14" H 6150 2950 50  0001 C CNN
+F 3 "" H 6150 2950 50  0000 C CNN
+	1    6150 2950
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X14 P1
+L Conn_01x14 P1
 U 1 1 5978EF1D
-P 2250 3000
-F 0 "P1" H 2250 3750 50  0000 C CNN
-F 1 "CONN_01X14" V 2350 3000 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x14" H 2250 3000 50  0001 C CNN
-F 3 "" H 2250 3000 50  0000 C CNN
-	1    2250 3000
+P 2250 3050
+F 0 "P1" H 2250 3800 50  0000 C CNN
+F 1 "CONN_01X14" V 2350 3050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x14" H 2250 3050 50  0001 C CNN
+F 3 "" H 2250 3050 50  0000 C CNN
+	1    2250 3050
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -95,17 +96,17 @@ Wire Wire Line
 Wire Wire Line
 	3450 2550 2450 2550
 Wire Wire Line
-	3450 2650 2450 2650
+	2450 2650 3450 2650
 Wire Wire Line
 	3450 2750 2450 2750
 Wire Wire Line
-	3450 2850 2450 2850
+	2450 2850 3450 2850
 Wire Wire Line
-	3450 3050 2750 3050
+	2750 3050 3450 3050
 Wire Wire Line
-	2750 3050 2750 3250
+	2750 3250 2750 3050
 Wire Wire Line
-	2750 3250 2450 3250
+	2450 3250 2750 3250
 Wire Wire Line
 	2550 3250 2550 3350
 Wire Wire Line
@@ -145,7 +146,7 @@ Wire Wire Line
 	5750 3150 5950 3150
 Connection ~ 5750 3050
 Wire Wire Line
-	5950 3450 4400 3450
+	4400 3450 5950 3450
 Wire Wire Line
 	5950 3550 4300 3550
 Wire Wire Line
@@ -167,11 +168,11 @@ Wire Wire Line
 	5700 3350 5950 3350
 Connection ~ 5700 3350
 Wire Wire Line
-	5000 3050 5000 3750
+	5000 3750 5000 3050
 Wire Wire Line
-	5000 3750 2650 3750
+	2650 3750 5000 3750
 Wire Wire Line
-	2650 3750 2650 3050
+	2650 3050 2650 3750
 Wire Wire Line
 	2650 3050 2450 3050
 Connection ~ 5000 3050
@@ -227,14 +228,14 @@ Wire Wire Line
 Connection ~ 3800 3650
 Connection ~ 3900 3450
 $Comp
-L CONN_02X02 P4
+L Conn_02x02_Odd_Even P4
 U 1 1 59F61FAF
-P 5800 4500
-F 0 "P4" H 5800 4650 50  0000 C CNN
-F 1 "SWD" H 5800 4350 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x02" H 5800 3300 50  0001 C CNN
-F 3 "" H 5800 3300 50  0000 C CNN
-	1    5800 4500
+P 5750 4450
+F 0 "P4" H 5750 4600 50  0000 C CNN
+F 1 "SWD" H 5750 4300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x02" H 5750 3250 50  0001 C CNN
+F 3 "" H 5750 3250 50  0000 C CNN
+	1    5750 4450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -243,11 +244,11 @@ Wire Wire Line
 	6050 4050 5700 4050
 Connection ~ 5700 3850
 Wire Wire Line
-	6050 4550 6150 4550
+	6150 4550 6050 4550
 Wire Wire Line
-	6150 4550 6150 3950
+	6150 3950 6150 4550
 Wire Wire Line
-	6150 3950 5750 3950
+	5750 3950 6150 3950
 Connection ~ 5750 3150
 Wire Wire Line
 	3200 4450 5550 4450
@@ -271,14 +272,14 @@ F 3 "" H 2400 1900 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P3
+L Conn_01x02 P3
 U 1 1 59F623E0
-P 1350 1550
-F 0 "P3" H 1350 1700 50  0000 C CNN
-F 1 "5V" V 1450 1550 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 1350 1550 50  0001 C CNN
-F 3 "" H 1350 1550 50  0000 C CNN
-	1    1350 1550
+P 1350 1600
+F 0 "P3" H 1350 1750 50  0000 C CNN
+F 1 "5V" V 1450 1600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 1350 1600 50  0001 C CNN
+F 3 "" H 1350 1600 50  0000 C CNN
+	1    1350 1600
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -290,7 +291,7 @@ Wire Wire Line
 Wire Wire Line
 	2800 1700 2900 1700
 Wire Wire Line
-	2900 1500 2900 3050
+	2900 1100 2900 3050
 Connection ~ 2900 3050
 Wire Wire Line
 	1800 1600 1800 4200
@@ -320,4 +321,87 @@ Wire Wire Line
 Wire Wire Line
 	1900 1950 1900 1600
 Connection ~ 1900 1600
+$Comp
+L 25LC_EEPROM U5
+U 1 1 5A823387
+P 4350 1500
+F 0 "U5" H 4050 1750 50  0000 L CNN
+F 1 "25LC_EEPROM" H 4400 1750 50  0000 L CNN
+F 2 "Housings_SOIC:SOIJ-8_5.3x5.3mm_Pitch1.27mm" H 4000 1450 50  0001 C CNN
+F 3 "" H 4000 1450 50  0001 C CNN
+	1    4350 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_02x02_Odd_Even P5
+U 1 1 5A823CF1
+P 5450 1750
+F 0 "P5" H 5500 1850 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 5500 1550 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x02_Pitch2.54mm" H 5450 1750 50  0001 C CNN
+F 3 "" H 5450 1750 50  0001 C CNN
+	1    5450 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 2350 5900 1750
+Wire Wire Line
+	5900 1750 5750 1750
+Connection ~ 5900 2350
+Wire Wire Line
+	5750 1850 5850 1850
+Wire Wire Line
+	5850 1850 5850 2450
+Connection ~ 5850 2450
+Wire Wire Line
+	5250 1850 5250 3050
+Connection ~ 5250 3050
+Wire Wire Line
+	4350 1800 4350 2150
+Wire Wire Line
+	4350 2150 5250 2150
+Connection ~ 5250 2150
+Wire Wire Line
+	4350 1200 4350 1100
+Wire Wire Line
+	4350 1100 2900 1100
+Connection ~ 2900 1500
+Wire Wire Line
+	3950 1400 3800 1400
+Wire Wire Line
+	3800 1400 3800 1100
+Connection ~ 3800 1100
+Wire Wire Line
+	3950 1500 3600 1500
+Wire Wire Line
+	3600 1500 3600 1100
+Connection ~ 3600 1100
+Wire Wire Line
+	4750 1500 4850 1500
+Wire Wire Line
+	4850 1500 4850 1950
+Wire Wire Line
+	4850 1950 3400 1950
+Wire Wire Line
+	3400 1950 3400 2350
+Connection ~ 3400 2350
+Wire Wire Line
+	4750 1400 4950 1400
+Wire Wire Line
+	4950 1400 4950 2550
+Connection ~ 4950 2550
+Wire Wire Line
+	5050 2650 5050 1600
+Wire Wire Line
+	5050 1600 4750 1600
+Connection ~ 5050 2650
+Wire Wire Line
+	5150 2750 5150 1750
+Wire Wire Line
+	5150 1750 3900 1750
+Wire Wire Line
+	3900 1750 3900 1600
+Wire Wire Line
+	3900 1600 3950 1600
+Connection ~ 5150 2750
 $EndSCHEMATC
